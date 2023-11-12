@@ -6,7 +6,7 @@ const Navbar = () => {
       <li><NavLink
         to="/"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "text-[#EEFF25] hover:text-white" : ""
         }
       >
         Home
@@ -16,7 +16,7 @@ const Navbar = () => {
       <NavLink
         to="/contact"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "text-[#EEFF25] hover:text-white" : ""
         }
       >
         Contact Us
@@ -26,7 +26,7 @@ const Navbar = () => {
       <NavLink
         to="/dashboard"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "text-[#EEFF25] hover:text-white" : ""
         }
       >
         Dashboard
@@ -36,7 +36,7 @@ const Navbar = () => {
      <NavLink
         to="/menu"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "text-[#EEFF25] hover:text-white" : ""
         }
       >
         Our Menu
@@ -46,7 +46,7 @@ const Navbar = () => {
      <NavLink
         to="/shop"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "text-[#EEFF25] hover:text-white" : ""
         }
       >
         Our Shop
@@ -77,7 +77,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-6 z-[1] p-2 shadow bg-black rounded-box w-52 text-xl font-medium"
             >
               {/* list item  */}
               {navLinks}
@@ -86,17 +86,17 @@ const Navbar = () => {
           <Link to='/'>
           <div className="ml-8">
            <div>
-           <p className="text-2xl font-bold block">BISTRO BOSS <br />
+           <p className="md:text-2xl font-bold block">BISTRO BOSS <br />
             
             </p>
-            <p className="text-xl font-medium block">Restaurant</p>
+            <p className="md:text-xl font-medium block">Restaurant</p>
            </div>
            
           </div>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-xl font-medium">
             {/* list item */}
             {navLinks}
           </ul>
