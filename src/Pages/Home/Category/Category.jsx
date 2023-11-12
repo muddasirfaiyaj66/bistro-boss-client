@@ -29,19 +29,19 @@ const Category = () => {
         className="mySwiper mb-24"
       >
         <SwiperSlide><img src={side1} alt="" />
-        <h1 className='text-4xl uppercase text-white -mt-20 text-center font-medium'> salads</h1>
+        <h1 className='md:text-4xl uppercase text-white -mt-20 text-center font-medium'> salads</h1>
         </SwiperSlide>
         <SwiperSlide><img src={side2} alt="" />
-        <h1 className='text-4xl uppercase text-white -mt-20 text-center font-medium'>pizzas </h1>
+        <h1 className='md:text-4xl uppercase text-white -mt-20 text-center font-medium'>pizzas </h1>
         </SwiperSlide>
         <SwiperSlide><img src={side3} alt="" />
-        <h1 className='text-4xl uppercase text-white -mt-20 text-center font-medium'> Soups</h1>
+        <h1 className='md:text-4xl uppercase text-white -mt-20 text-center font-medium'> Soups</h1>
         </SwiperSlide>
         <SwiperSlide><img src={side4} alt="" />
-        <h1 className='text-4xl uppercase text-white -mt-20 text-center font-medium'> desserts</h1>
+        <h1 className='md:text-4xl uppercase text-white -mt-20 text-center font-medium'> desserts</h1>
         </SwiperSlide>
         <SwiperSlide><img src={side5} alt="" />
-        <h1 className='text-4xl uppercase text-white -mt-20 text-center font-medium'> salads</h1>
+        <h1 className='md:text-4xl uppercase text-white -mt-20 text-center font-medium'> salads</h1>
         </SwiperSlide>
         
       </Swiper>
