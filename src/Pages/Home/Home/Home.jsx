@@ -2,6 +2,7 @@ import Banner from "../Banner/Banner";
 import CallUs from "../CallUs/CallUs";
 import Category from "../Category/Category";
 import ChefServiceSection from "../ChefServiceSection/ChefServiceSection";
+import HomeCard from "../HomeCard/HomeCard";
 import PopularMenu from "../PopularMenu/PopularMenu";
 
 
@@ -16,6 +17,7 @@ const Home = () => {
             <PopularMenu></PopularMenu>
 
             <CallUs></CallUs>
+            <HomeCard></HomeCard>
            
         </div>
     );
