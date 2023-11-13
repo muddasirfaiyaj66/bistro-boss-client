@@ -1,3 +1,4 @@
+import HelmetTitle from "../../../Components/Helmet/HelmetTitle";
 import Banner from "../Banner/Banner";
 import CallUs from "../CallUs/CallUs";
 import Category from "../Category/Category";
@@ -9,8 +10,10 @@ import Testimonials from "../Testimonials/Testimonials";
 
 
 const Home = () => {
+    
     return (
         <div>
+            <HelmetTitle title={'Home'}></HelmetTitle>
             <Banner></Banner>
           
             <Category></Category>

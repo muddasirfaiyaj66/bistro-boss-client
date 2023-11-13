@@ -3,13 +3,13 @@ import cardImage from "../../../assets/home/slide1.jpg";
 
 const HomeCard = () => {
   return (
-   <div>
+   <div className="p-5">
     <div className="mt-[100px]">
     <SectionTitle subHeading={"Should Try"} heading={'CHEF RECOMMENDS'}></SectionTitle>
     </div>
      <div className="grid md:grid-cols-3 gap-10 mb-8">
       {/* cart 1  */}
-      <div className="card w-[424px] h-[541px] card-compact  bg-base-100 shadow-xl">
+      <div className="card md:w-[424px] md:h-[541px] card-compact  bg-base-100 shadow-xl">
         <figure>
           <img
             src={cardImage}
@@ -32,7 +32,7 @@ const HomeCard = () => {
       {/* end of cart1 */}
 
       {/* cart 2 */}
-      <div className="card w-[424px] h-[541px] card-compact  bg-base-100 shadow-xl">
+      <div className="card md:w-[424px] md:h-[541px] card-compact  bg-base-100 shadow-xl">
         <figure>
           <img
             src={cardImage}
@@ -55,7 +55,7 @@ const HomeCard = () => {
       
       {/* End of cart 2  */}
       {/* cart 3 */}
-      <div className="card w-[424px] h-[541px] card-compact  bg-base-100 shadow-xl">
+      <div className="card md:w-[424px] md:h-[541px] card-compact  bg-base-100 shadow-xl">
         <figure>
           <img
             src={cardImage}

@@ -3,7 +3,7 @@ import FeaturedImg from "../../../assets/home/featured.jpg";
 import './Featured.css'
 const Featured = () => {
   return (
-    <div className="featured-item bg-fixed  my-20 text-white">
+    <div className="featured-item bg-fixed  my-20 p-5 text-white">
       <div className="pt-10">
       <SectionTitle
         heading={"FROM OUR MENU"}
@@ -18,7 +18,7 @@ const Featured = () => {
           <p>March 20, 2023</p>
           <p className="uppercase font-xl font-semibold">WHERE CAN I GET SOME?</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate facere, deserunt dolores maiores quod nobis quas quasi. Eaque repellat recusandae ad laudantium tempore consequatur consequuntur omnis ullam maxime tenetur.</p>
-          <button className="btn btn-outline border-0 text-white border-b-white border-b-4">Read More</button>
+          <button className="btn btn-outline border-0 my-2 pb-5 text-white border-b-white border-b-4">Read More</button>
         </div>
       </div>
     </div>
