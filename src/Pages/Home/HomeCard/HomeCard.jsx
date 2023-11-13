@@ -1,8 +1,13 @@
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import cardImage from "../../../assets/home/slide1.jpg";
 
 const HomeCard = () => {
   return (
-    <div className="grid md:grid-cols-3 gap-10 my-8">
+   <div>
+    <div className="mt-[100px]">
+    <SectionTitle subHeading={"Should Try"} heading={'CHEF RECOMMENDS'}></SectionTitle>
+    </div>
+     <div className="grid md:grid-cols-3 gap-10 mb-8">
       {/* cart 1  */}
       <div className="card w-[424px] h-[541px] card-compact  bg-base-100 shadow-xl">
         <figure>
@@ -24,7 +29,7 @@ const HomeCard = () => {
           </div>
         </div>
       </div>
-      {/* end of cart 1 */}
+      {/* end of cart1 */}
 
       {/* cart 2 */}
       <div className="card w-[424px] h-[541px] card-compact  bg-base-100 shadow-xl">
@@ -71,6 +76,7 @@ const HomeCard = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 
