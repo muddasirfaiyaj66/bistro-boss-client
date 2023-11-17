@@ -1,5 +1,6 @@
 
 
+import { Link } from "react-router-dom";
 import Cover from "../../Shared/Cover/Cover";
 import MenuItem from "../../Shared/MenuItem/MenuItem";
 
@@ -14,9 +15,11 @@ const MenuCategory = ({items, title, coverImg, btn}) => {
         ))}
             </div>
         <div className="flex text-center justify-center items-center my-8">
-        {btn && <button className="btn text-center btn-outline border-0  border-b-black border-b-4">
+       <Link to={`/order/${title}`}>
+       {btn && <button className="btn text-center btn-outline border-0  border-b-black border-b-4">
           {btn}
         </button>}
+       </Link>
       </div>
       </div>
         </div>

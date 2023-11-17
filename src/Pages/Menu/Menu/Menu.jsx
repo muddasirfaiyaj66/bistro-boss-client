@@ -32,7 +32,7 @@ const Menu = () => {
           <MenuCategory 
           items={desserts}
           coverImg={desertImg}
-          title={"Desert"}
+          title={"desert"}
           btn={'ORDER YOUR FAVOURITE FOOD'}
           ></MenuCategory>
 
@@ -40,7 +40,7 @@ const Menu = () => {
           <MenuCategory 
           items={pizza}
           coverImg={pizzaImg}
-          title={"PIZZA"}
+          title={"pizza"}
           btn={'ORDER YOUR FAVOURITE FOOD'}
           ></MenuCategory>
 
@@ -48,7 +48,7 @@ const Menu = () => {
           <MenuCategory 
           items={salad}
           coverImg={saladImg}
-          title={"SALAD"}
+          title={"salad"}
           btn={'ORDER YOUR FAVOURITE FOOD'}
           ></MenuCategory>
 
@@ -56,7 +56,7 @@ const Menu = () => {
           <MenuCategory 
           items={soup}
           coverImg={soupImg}
-          title={"SOUP"}
+          title={"soup"}
           btn={'ORDER YOUR FAVOURITE FOOD'}
           ></MenuCategory>
 

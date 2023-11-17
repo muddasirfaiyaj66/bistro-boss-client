@@ -8,14 +8,6 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36eeb9",
-        "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "drinks",
-        "price": 14.7
-    },
-    {
         "_id": "642c155b2c4774f05c36ee7c",
         "name": "Escalope de Veau",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
@@ -168,12 +160,27 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeba",
-        "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eebb",
+        "name": "Martini",
+        "recipe": "Classic Martini with gin, dry vermouth, and a lemon twist.",
+        "image": "https://i.ibb.co/5h4TGy5/MSL-314342-extra-dirty-martini-horiz-1023-221108c8e5d545348905322221704e35.jpg",
         "category": "drinks",
-        "price": 14.7
+        "price": 10.0
+    },{
+        "_id": "642c155b2c4774f05c36eebc",
+        "name": "Margarita",
+        "recipe": "Refreshing Margarita with tequila, triple sec, lime juice, and a salted rim.",
+        "image": "https://i.ibb.co/jh0WkLG/Margarita-10.jpg",
+        "category": "drinks",
+        "price": 9.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36eebe",
+        "name": "Piña Colada",
+        "recipe": "Tropical Piña Colada with rum, coconut cream, pineapple juice, and crushed ice.",
+        "image": "https://i.ibb.co/vZN2Z2B/delish-230404-pinacolada-17970-kj-index-6440218ea3f56.jpg",
+        "category": "drinks",
+        "price": 8.8
     },
     {
         "_id": "642c155b2c4774f05c36ee80",
