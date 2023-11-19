@@ -15,6 +15,7 @@ const Login = () => {
   const captchaRef = useRef(null);
   const [disabled, setDisabled]= useState(true);
   const {login,signInWithGoogle}= useAuth()
+  const from = location.state?.from?.pathname || '/';
 
   useEffect(()=>{
     loadCaptchaEnginge(6); 
@@ -39,7 +40,7 @@ const Login = () => {
               text: "Successfully Login",
             });
             //navigate after log in
-            navigate(location?.state ? location.state : "/");
+            navigate(from, { replace: true });
           })
           .catch((error) => {
             Swal.fire({
@@ -78,7 +79,7 @@ const Login = () => {
             text: "Successfully Login",
           });
           //navigate after log in
-          navigate(location?.state ? location.state : "/");
+        navigate(from, {replace:true})
         })
         .catch((error) => {
           Swal.fire({

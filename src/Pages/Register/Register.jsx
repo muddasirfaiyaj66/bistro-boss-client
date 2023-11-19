@@ -12,6 +12,7 @@ const Register = () => {
   const { createUser, handleUpdateProfile } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
+  const from = location.state?.from?.pathname || '/';
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -66,7 +67,7 @@ const Register = () => {
             text: "User Created Successfully",
           });
           //navigate after register
-          navigate(location?.state ? location.state : "/");
+          navigate(from, { replace: true });
         });
       })
       .catch((error) => {

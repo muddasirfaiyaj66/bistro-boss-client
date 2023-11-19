@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
-
+import { FaShoppingCart } from "react-icons/fa";
 const Navbar = () => {
   const {user,logOut}= useAuth();
   const navLinks = (
@@ -53,6 +53,17 @@ const Navbar = () => {
       >
         Order
       </NavLink>
+     </li>
+     <li>
+     <Link
+        to="/cart"
+        
+      >
+       <button className="btn btn-sm">
+        <FaShoppingCart></FaShoppingCart>
+        <div className="badge badge-secondary">+0</div>
+       </button>
+      </Link>
      </li>
     </>
   );
