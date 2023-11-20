@@ -5,10 +5,12 @@ import { BiShowAlt, BiHide } from "react-icons/bi";
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 import HelmetTitle from "../../Components/Helmet/HelmetTitle";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+  const axiosPublic = useAxiosPublic()
   const { createUser, handleUpdateProfile } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
@@ -61,13 +63,24 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         handleUpdateProfile(name, image).then(() => {
-          Swal.fire({
-            icon: "success",
-            title: "Congrats!!!",
-            text: "User Created Successfully",
-          });
-          //navigate after register
-          navigate(from, { replace: true });
+          const userInfo ={
+            name,
+            email
+          }
+        axiosPublic.post('/users', userInfo)
+        .then(res=> {
+          if(res.data.insertedId){
+            Swal.fire({
+              icon: "success",
+              title: "Congrats!!!",
+              text: "User Created Successfully",
+            });
+            //navigate after register
+            navigate(from, { replace: true });
+          }
+        })
+
+          
         });
       })
       .catch((error) => {
@@ -78,6 +91,7 @@ const Register = () => {
         });
       });
   };
+ 
   return (
     <div className="  lg:flex max-w-screen-xl mx-auto p-10">
         <HelmetTitle title={"Sign Up"}></HelmetTitle>
@@ -169,6 +183,8 @@ const Register = () => {
             <Link to="/login">Login</Link>
           </span>
         </p>
+       {/* Social login */}
+       <SocialLogin></SocialLogin>
       </div>
     </div>
   );
