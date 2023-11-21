@@ -51,6 +51,7 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
         <Dashboard></Dashboard>
       </PrivateRoute>,
       children: [
+        //normal user routes
         {
           path:'cart',
           element:<Cart></Cart>

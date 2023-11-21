@@ -20,12 +20,13 @@ const SocialLogin = () => {
             axiosPublic.post("/users", userInfo)
             .then(res=>{
               if(res?.data){
+                console.log(res.data);
                 Swal.fire({
                   icon: "success",
                   title: "Congrats!!!",
                   text: "Successfully Login",
                 });
-                console.log(res.data);
+                
                 //navigate after log in
               navigate(from, {replace:true})
               }
