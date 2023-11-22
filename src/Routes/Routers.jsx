@@ -14,6 +14,7 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AddItems from "../Pages/Dashboard/AddItems/AddItems";
 import AdminRoute from "./AdminRoute";
 import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
+import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateItem";
 
 
 
@@ -63,19 +64,35 @@ import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
         //admin routes
         {
           path:'allUsers',
-          element:<AllUsers></AllUsers>
+          element:<PrivateRoute>
+            <AdminRoute>
+            <AllUsers></AllUsers>
+            </AdminRoute>
+          </PrivateRoute>
         },
         {
           path:'manageItems',
           element:<PrivateRoute>
+            <AdminRoute>
             <ManageItems></ManageItems>
+            </AdminRoute>
+          </PrivateRoute>
+        },
+        {
+          path:"updateItem/:id",
+          element: <PrivateRoute>
+            <AdminRoute>
+            <UpdateItem></UpdateItem>
+            </AdminRoute>
           </PrivateRoute>
         },
         {
           path:'addItems',
-          element:<AdminRoute>
+          element:<PrivateRoute>
+            <AdminRoute>
             <AddItems></AddItems>
           </AdminRoute>
+          </PrivateRoute>
         }
       ]
     }

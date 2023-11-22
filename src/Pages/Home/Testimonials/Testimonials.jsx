@@ -25,7 +25,7 @@ const Testimonials = () => {
       ></SectionTitle>
 
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        {reviews.map((review) => (
+        {reviews?.map((review) => (
           <SwiperSlide key={review._id}>
             <div className="max-w-screen-md mx-auto">
               <div className="flex justify-center items-center my-8">

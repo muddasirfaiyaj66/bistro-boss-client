@@ -12,11 +12,11 @@ import MenuCategory from "../MenuCategory/MenuCategory";
 
 const Menu = () => {
     const [menu] =  useMenu()
-    const desserts = menu.filter((item) => item.category === "dessert");
-    const pizza = menu.filter((item) => item.category === "pizza");
-    const salad = menu.filter((item) => item.category === "salad");
-    const soup = menu.filter((item) => item.category === "soup");
-    const offered = menu.filter((item) => item.category === "offered");
+    const desserts = menu?.filter((item) => item.category === "dessert");
+    const pizza = menu?.filter((item) => item.category === "pizza");
+    const salad = menu?.filter((item) => item.category === "salad");
+    const soup = menu?.filter((item) => item.category === "soup");
+    const offered = menu?.filter((item) => item.category === "offered");
     return (
         <div>
             <HelmetTitle title={'Menu'}></HelmetTitle>
