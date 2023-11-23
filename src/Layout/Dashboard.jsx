@@ -23,7 +23,7 @@ const Dashboard = () => {
     <div className="flex">
       <div className="w-64 min-h-screen bg-[#D1A054]">
         <div className="menu">
-          {isAdmin ? (
+          {isAdmin ?
             <>
             <li>
             <NavLink to="/dashboard/adminHome">
@@ -56,7 +56,7 @@ const Dashboard = () => {
             </NavLink>
           </li>
             </>
-          ) : (
+           : 
             <>
               <li>
                 <NavLink to="/dashboard/userHome">
@@ -89,7 +89,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
             </>
-          )}
+          }
           <div className="divider"></div>
           {/* Shared navLinks */}
           <li>
