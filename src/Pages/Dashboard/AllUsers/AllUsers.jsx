@@ -1,15 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import useAxios from "../../../Hooks/useAxios";
 import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { FaUsers } from "react-icons/fa6";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const AllUsers = () => {
-  const axios = useAxios();
+  const axiosSecure = useAxiosSecure();
   const { data: users = [] , refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axios.get("/users");
+      const res = await axiosSecure.get("/users");
       return res.data;
     },
   });
@@ -25,7 +25,7 @@ const AllUsers = () => {
         confirmButtonText: "Yes, set admin!"
       }).then((result) => {
         if (result.isConfirmed) {
-            axios.patch(`/users/admin/${user._id}`)
+            axiosSecure.patch(`/users/admin/${user._id}`)
             .then(res=>{
                 if(res.data.modifiedCount > 0){
                     refetch()
@@ -52,7 +52,7 @@ const AllUsers = () => {
         confirmButtonText: "Yes, delete it!"
       }).then((result) => {
         if (result.isConfirmed) {
-            axios.delete(`/users/${id}`)
+            axiosSecure.delete(`/users/${id}`)
             .then(res=>{
         if(res?.data?.deletedCount > 0){
                 refetch();

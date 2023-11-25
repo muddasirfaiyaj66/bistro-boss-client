@@ -2,11 +2,11 @@ import { FaTrash } from "react-icons/fa";
 import useCart from "../../../Hooks/useCart";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import useAxios from "../../../Hooks/useAxios";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const Cart = () => {
   const [cart, refetch] = useCart();
-  const axios = useAxios();
+  const axiosSecure = useAxiosSecure();
   const totalPrice = cart?.reduce((total, item) => {
     return total + item.price;
     
@@ -22,7 +22,7 @@ const Cart = () => {
         confirmButtonText: "Yes, delete it!"
       }).then((result) => {
         if (result.isConfirmed) {
-            axios.delete(`/carts/${id}`)
+            axiosSecure.delete(`/carts/${id}`)
             .then(res=>{
         if(res?.data?.deletedCount > 0){
                 refetch();

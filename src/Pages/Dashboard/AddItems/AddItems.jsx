@@ -2,13 +2,13 @@ import { useForm } from "react-hook-form";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { FaUtensils } from "react-icons/fa6";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
-import useAxios from "../../../Hooks/useAxios";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const AddItems = () => {
   const axiosPublic = useAxiosPublic();
-  const axios = useAxios()
+  const axiosSecure = useAxiosSecure()
   const {
     register,
     handleSubmit,
@@ -34,7 +34,7 @@ const AddItems = () => {
         image:res.data.display_url
 
       }
-      const menuResponse = await axios.post('/menu',menuItem)
+      const menuResponse = await axiosSecure.post('/menu',menuItem)
       console.log(menuResponse.data)
       if(menuResponse.data.insertedId){
         reset();

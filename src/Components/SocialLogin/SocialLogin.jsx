@@ -1,10 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+
 
 const SocialLogin = () => {
-    const axiosPublic = useAxiosPublic()
+    const axiosSecure = useAxiosSecure()
     const location = useLocation();
     const navigate = useNavigate();
     const {signInWithGoogle } = useAuth();
@@ -17,7 +19,7 @@ const SocialLogin = () => {
               email: result?.user?.email,
               name: result?.user?.displayName
             }
-            axiosPublic.post("/users", userInfo)
+            axiosSecure.post("/users", userInfo)
             .then(res=>{
               if(res?.data){
                 console.log(res.data);

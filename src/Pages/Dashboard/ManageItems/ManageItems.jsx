@@ -3,13 +3,13 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import useMenu from "../../../Hooks/useMenu";
 import { FaEdit } from "react-icons/fa";
 import Swal from "sweetalert2";
-import useAxios from "../../../Hooks/useAxios";
 import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const ManageItems = () => {
 
   const [menu, loading, refetch] = useMenu();
-  const axios = useAxios()
+  const axiosSecure = useAxiosSecure()
   const handleDelete = item => {
     Swal.fire({
       title: "Are you sure?",
@@ -21,7 +21,7 @@ const ManageItems = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`/menu/${item._id}`)
+        axiosSecure.delete(`/menu/${item._id}`)
         .then((res) => {
           if (res?.data?.deletedCount > 0) {
             refetch();

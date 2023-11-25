@@ -2,16 +2,16 @@ import { useParams } from "react-router-dom";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
-import useAxios from "../../../Hooks/useAxios";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { FaUtensils } from "react-icons/fa6";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const UpdateItem = () => {
     const axiosPublic = useAxiosPublic()
-    const axios = useAxios()
+    const axiosSecure = useAxiosSecure()
     const {
       register,
       handleSubmit,
@@ -47,7 +47,7 @@ const UpdateItem = () => {
           image:res.data.display_url
   
         }
-        const menuResponse = await axios.patch(`/menu/${id}`,menuItem)
+        const menuResponse = await axiosSecure.patch(`/menu/${id}`,menuItem)
         console.log(menuResponse.data)
         if(menuResponse.data.modifiedCount > 0){
           reset();
